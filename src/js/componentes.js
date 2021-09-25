@@ -34,3 +34,16 @@ txtInput.addEventListener("keyup", (event) => {
     txtInput.value = "";
   }
 });
+
+divTodoList.addEventListener("click", (event) => {
+  const nombreElemento = event.target.localName;
+  const todoElemento = event.target.parentElement.parentElement;
+  const todoId = todoElemento.getAttribute("data-id");
+
+  console.log(nombreElemento);
+
+  if (nombreElemento.includes("input")) {
+    todoList.toogleTodo(todoId);
+    todoElemento.classList.toggle("completed");
+  }
+});
