@@ -22,5 +22,9 @@ export class TodoList {
     }
   }
 
-  eliminarCompletadors() {}
+  eliminarCompletados() {
+    this.todos = this.todos.filter((todo) => {
+      return !todo.completado;
+    });
+  }
 }
