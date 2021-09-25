@@ -7,7 +7,11 @@ export class TodoList {
     this.todos.push(todo);
   }
 
-  eliminarTodo(id) {}
+  eliminarTodo(id) {
+    this.todos = this.todos.filter((todo) => {
+      return todo.id != id;
+    });
+  }
 
   toogleTodo(id) {
     for (const todo of this.todos) {

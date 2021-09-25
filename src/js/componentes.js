@@ -40,10 +40,13 @@ divTodoList.addEventListener("click", (event) => {
   const todoElemento = event.target.parentElement.parentElement;
   const todoId = todoElemento.getAttribute("data-id");
 
-  console.log(nombreElemento);
-
   if (nombreElemento.includes("input")) {
     todoList.toogleTodo(todoId);
     todoElemento.classList.toggle("completed");
+  }
+
+  if (nombreElemento.includes("button")) {
+    todoList.eliminarTodo(todoId);
+    divTodoList.removeChild(todoElemento);
   }
 });
