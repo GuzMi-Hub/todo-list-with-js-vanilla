@@ -4,7 +4,7 @@ export class TodoList {
   }
 
   nuevoTodo(todo) {
-    this.todo.push(todo);
+    this.todos.push(todo);
   }
 
   eliminarTodo(id) {}
