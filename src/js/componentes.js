@@ -26,6 +26,12 @@ export const crearTodoHtml = (todo) => {
   return div.firstElementChild;
 };
 
+export const cargarHTML = () => {
+  todoList.todos.forEach((todo) => {
+    crearTodoHtml(todo);
+  });
+};
+
 txtInput.addEventListener("keyup", (event) => {
   if (event.keyCode === 13 && txtInput.value.length > 0) {
     const nuevoTodo = new Todo(txtInput.value);
